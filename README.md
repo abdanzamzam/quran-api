@@ -1,2 +1,2 @@
-# quran-api
-Quran API
+# Quran API Indonesia
+Quran API Indonesia
