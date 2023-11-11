@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quran_surahs",
+  "info": {
+    "singularName": "quran-surah",
+    "pluralName": "quran-surahs",
+    "displayName": "Quran Surah"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "number": {
+      "type": "integer"
+    },
+    "arabic": {
+      "type": "string"
+    },
+    "latin": {
+      "type": "string"
+    },
+    "transliteration": {
+      "type": "string"
+    },
+    "translation": {
+      "type": "string"
+    },
+    "numAyah": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "location": {
+      "type": "string"
+    },
+    "quran_ayahs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::quran-ayah.quran-ayah",
+      "mappedBy": "quran_surah"
+    }
+  }
+}

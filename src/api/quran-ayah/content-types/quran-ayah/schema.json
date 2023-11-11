@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quran_ayahs",
+  "info": {
+    "singularName": "quran-ayah",
+    "pluralName": "quran-ayahs",
+    "displayName": "Quran Ayah"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ayah": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "quarterHizb": {
+      "type": "integer"
+    },
+    "juz": {
+      "type": "integer"
+    },
+    "manzil": {
+      "type": "integer"
+    },
+    "arabic": {
+      "type": "text"
+    },
+    "kitabah": {
+      "type": "text"
+    },
+    "latin": {
+      "type": "text"
+    },
+    "arabic_words": {
+      "type": "json"
+    },
+    "translation": {
+      "type": "text"
+    },
+    "footnotes": {
+      "type": "text"
+    },
+    "quran_surah": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::quran-surah.quran-surah",
+      "inversedBy": "quran_ayahs"
+    }
+  }
+}
